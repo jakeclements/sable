@@ -8,11 +8,11 @@ Tasks should be run from the project root directory.
 Prefix the task with `npm run`, for example; `npm run clean`.
 The tasks `start` and `test` are special tasks that can be run whilst omitting the `run` keyword. Eg. `npm start`, or `npm test`.
 
-- **Start:** Clean the build folder and begin watching for development file changes
-- **Test:** Run the frontend test suite
-- **Test Coverage:** Run the frontend test suite and generate a code coverage report
-- **Clean:** Remove the /build folder
-- **Watch Development:** Build the files and begin watching for development changes
+- **start**: Clean the build folder and begin watching for development file changes
+- **test**: Run the frontend test suite
+- **test:coverage**: Run the frontend test suite and generate a code coverage report
+- **clean**: Remove the /build folder
+- **watch:dev**: Build the files and begin watching for development changes
 
 ## Node Package Manager
 
