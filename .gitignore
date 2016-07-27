@@ -1,0 +1,6 @@
+## Ignore Logs
+*.log
+
+build
+coverage
+node_modules
