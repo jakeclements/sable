@@ -14,7 +14,6 @@ Application dependencies are installed using `npm install`.
 
 ### Development Dependencies
 Development dependencies are installed using `npm install` unless the `--production` flag has been added.
-- Babel CLI (required for babel-node, used in ES6 coverage)
 - Babel Core
 - Babel Node (required for ES6 coverage)
 - Babel Preset ES2015
