@@ -3,11 +3,13 @@
    ========================================================================== */
 import angular from 'angular';
 import ngRedux from 'ng-redux';
-import { combineReducers } from 'redux';
+import reducers from './reducers';
+import TestController from './components/test/test.controller';
+import createLogger from 'redux-logger';
+
+const logger = createLogger({ collapsed: true })
 
 angular
     .module('app', [ngRedux])
-    .config( ($ngReduxProvider) => {
-        let reducer = combineReducers(/* Imported Reducers object */);
-        $ngReduxProvider.createStoreWith(reducer, ['promiseMiddleware']);
-    });
+    .config( ($ngReduxProvider) => { $ngReduxProvider.createStoreWith(reducers, [logger]); })
+    .controller('testctrl', TestController);

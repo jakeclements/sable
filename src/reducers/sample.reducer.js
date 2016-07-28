@@ -3,11 +3,17 @@
    ========================================================================== */
 import * as types from '../actions/action.types';
 
-export default function sampleReducer(state = {}, action) {
+const initialState = {
+    clicked: false
+}
+
+export default function sampleReducer(state = initialState, action) {
     switch (action.type) {
         case types.CLICK:
-            state.clicked = action.bool
-            return state;
+            const newState = {
+                clicked: action.bool
+            }
+            return newState;
         default:
             return state
     }

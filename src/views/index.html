@@ -6,8 +6,25 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+
     <small>Test index.html</small>
-    <div id="app"></div>
+
+    <!-- Angular App -->
+    <div ng-app="app">
+
+        <!-- A test controller -->
+        <div ng-controller="testctrl as test">
+
+            <a ng-click="test.click(true)" href="#">True</a>
+            <a ng-click="test.click(false)" href="#">False</a>
+
+            {{test.clicked}}
+
+        </div>
+
+    </div>
+
     <script type="text/javascript" src="bundle.js"></script>
+
 </body>
 </html>

@@ -10,6 +10,7 @@ import CopyWebpackPlugin from 'copy-webpack-plugin';
 export const ROOT = path.join(__dirname, '..');
 
 export default {
+    devtool: 'eval-source-map',
     entry: path.join(ROOT, 'src', 'index'),
     output: {
         path: path.join(ROOT, 'build'),
