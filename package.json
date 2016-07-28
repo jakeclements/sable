@@ -4,7 +4,7 @@
   "description": "Angular 1 Project Base",
   "main": "index.js",
   "scripts": {
-    "start": "npm run clean && npm run watch:dev",
+    "start": "npm run clean && npm run start:dev",
     "test": "mocha --compilers js:babel-register",
     "test:coverage": "istanbul cover _mocha -- --compilers js:babel-register --colors",
     "clean": "rimraf build",
