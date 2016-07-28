@@ -35,3 +35,12 @@ Development dependencies are installed using `npm install` unless the `--product
 - Webpack
 - Babel Loader
 - Rimraf
+
+## To Do
+
+- [x] Setup Development Tooling
+- [x] Create Redux Flow
+- [ ] Setup Linting (JS)
+- [ ] Setup Linting (SASS)
+- [ ] Integrate UI Router
+- [ ] Add Tests for sample redux flow
