@@ -44,3 +44,4 @@ Development dependencies are installed using `npm install` unless the `--product
 - [ ] Setup Linting (SASS)
 - [ ] Integrate UI Router
 - [ ] Add Tests for sample redux flow
+- [ ] Setup angular ng-cache-loader to load templates
