@@ -1,8 +1,12 @@
 /* ==========================================================================
-   Test Module
+   Component Manifest
    ========================================================================== */
 import angular from 'angular';
-import TestController from './test.controller';
 
-angular.module('test', [])
-    .controller('testctrl', TestController);
+// Components
+import './test/test.module';
+
+// Named components
+const components = ['test'];
+
+angular.module('components', components)

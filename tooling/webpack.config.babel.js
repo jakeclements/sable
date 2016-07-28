@@ -17,10 +17,17 @@ export default {
         filename: 'bundle.js'
     },
     module: {
+        preLoaders: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: 'eslint'
+            }
+        ],
         loaders: [
             {
                 test: /\.js$/,
-                exclude: /(node_modules|bower_components)/,
+                exclude: /(node_modules)/,
                 loader: 'babel'
             }
         ]

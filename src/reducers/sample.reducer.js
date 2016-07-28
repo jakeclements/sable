@@ -9,12 +9,14 @@ const initialState = {
 
 export default function sampleReducer(state = initialState, action) {
     switch (action.type) {
-        case types.CLICK:
+        case types.CLICK: {
             const newState = {
                 clicked: action.bool
             }
             return newState;
-        default:
+        }
+        default: {
             return state
+        }
     }
 }

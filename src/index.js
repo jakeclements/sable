@@ -3,13 +3,25 @@
    ========================================================================== */
 import angular from 'angular';
 import ngRedux from 'ng-redux';
+import uiRouter from 'angular-ui-router';
 import reducers from './reducers';
-import TestController from './components/test/test.controller';
 import createLogger from 'redux-logger';
 
-const logger = createLogger({ collapsed: true })
+import './components';
+
+// Setup Redux Middleware
+const logger = createLogger({ collapsed: true });
+
+// Provide the application initial state (from server, localstorage, etc..)
+const initalState = {
+    sampleReducer: {
+        clicked: true
+    }
+};
 
 angular
-    .module('app', [ngRedux])
-    .config( ($ngReduxProvider) => { $ngReduxProvider.createStoreWith(reducers, [logger]); })
-    .controller('testctrl', TestController);
+    .module('app', [uiRouter, ngRedux, 'components'])
+    .config( ($ngReduxProvider) => {
+        $ngReduxProvider.createStoreWith(reducers, [logger], [], initalState);
+    })
+

@@ -1,9 +1,11 @@
 /* ==========================================================================
    Reducer Manifest
    ========================================================================== */
-import sampleReducer from './sample.reducer';
+import { router } from 'redux-ui-router';
 import { combineReducers } from 'redux';
+import sampleReducer from './sample.reducer';
 
 export default combineReducers({
-    sampleReducer
+    sampleReducer,
+    router
 })
