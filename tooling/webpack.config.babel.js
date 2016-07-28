@@ -4,9 +4,10 @@
 import path from 'path';
 import webpack from 'webpack';
 import NyanProgressPlugin from 'nyan-progress-webpack-plugin';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 
 // Root is the parent of the tooling folder
-const ROOT = path.join(__dirname, '..');
+export const ROOT = path.join(__dirname, '..');
 
 export default {
     entry: path.join(ROOT, 'src', 'index'),
@@ -24,6 +25,14 @@ export default {
         ]
     },
     plugins: [
-        new NyanProgressPlugin()
+        new NyanProgressPlugin(),
+        new CopyWebpackPlugin([
+            {
+                from: path.join(ROOT, 'src', 'views', '*.html'),
+                to: path.join(ROOT, 'build'),
+                force: true,
+                flatten: true
+            }
+        ])
     ]
 }
