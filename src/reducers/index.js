@@ -3,9 +3,9 @@
    ========================================================================== */
 import { router } from 'redux-ui-router';
 import { combineReducers } from 'redux';
-import sampleReducer from './sample.reducer';
+import sample from './sample.reducer';
 
 export default combineReducers({
-    sampleReducer,
+    sample,
     router
 })

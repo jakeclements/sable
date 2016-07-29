@@ -3,6 +3,7 @@
    ========================================================================== */
 import angular from 'angular';
 import ngRedux from 'ng-redux';
+import thunk from 'redux-thunk';
 import uiRouter from 'angular-ui-router';
 import reducers from './reducers';
 import createLogger from 'redux-logger';
@@ -13,15 +14,11 @@ import './components';
 const logger = createLogger({ collapsed: true });
 
 // Provide the application initial state (from server, localstorage, etc..)
-const initalState = {
-    sampleReducer: {
-        clicked: true
-    }
-};
+const initalState = {};
 
 angular
     .module('app', [uiRouter, ngRedux, 'components'])
     .config( ($ngReduxProvider) => {
-        $ngReduxProvider.createStoreWith(reducers, [logger], [], initalState);
+        $ngReduxProvider.createStoreWith(reducers, [thunk, logger], [], initalState);
     })
 
