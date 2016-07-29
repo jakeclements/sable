@@ -50,7 +50,6 @@ export default {
                 force: true,
                 flatten: true
             }
-        ]),
-        new ExtractTextPlugin('styles.css')
+        ])
     ]
 }
