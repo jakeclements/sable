@@ -9,7 +9,11 @@ import ngReduxUiRouter from 'redux-ui-router';
 import reducers from './reducers';
 import createLogger from 'redux-logger';
 
+// Import components
 import './components';
+
+// Import Styles
+import './styles/styles';
 
 // Setup Redux Middleware
 const logger = createLogger({ collapsed: true });

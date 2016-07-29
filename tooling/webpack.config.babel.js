@@ -5,6 +5,8 @@ import path from 'path';
 import webpack from 'webpack';
 import NyanProgressPlugin from 'nyan-progress-webpack-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
+
 
 // Root is the parent of the tooling folder
 export const ROOT = path.join(__dirname, '..');
@@ -15,6 +17,9 @@ export default {
     output: {
         path: path.join(ROOT, 'build'),
         filename: 'bundle.js'
+    },
+    resolve: {
+        extensions: ['', '.js', '.scss']
     },
     module: {
         preLoaders: [
@@ -29,6 +34,10 @@ export default {
                 test: /\.js$/,
                 exclude: /(node_modules)/,
                 loader: 'babel'
+            },
+            {
+                test: /\.scss$/,
+                loader: 'style!css?sourceMap!sass?sourceMap'
             }
         ]
     },
@@ -41,6 +50,7 @@ export default {
                 force: true,
                 flatten: true
             }
-        ])
+        ]),
+        new ExtractTextPlugin('styles.css')
     ]
 }

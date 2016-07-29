@@ -42,12 +42,17 @@
     "babel-register": "^6.11.6",
     "chai": "^3.5.0",
     "copy-webpack-plugin": "^3.0.1",
+    "css-loader": "^0.23.1",
     "eslint": "^3.1.1",
     "eslint-loader": "^1.5.0",
+    "extract-text-webpack-plugin": "^1.0.1",
     "istanbul": "^1.0.0-alpha.2",
     "mocha": "^2.5.3",
+    "node-sass": "^3.8.0",
     "nyan-progress-webpack-plugin": "^1.1.4",
     "rimraf": "^2.5.4",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.1",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   }
