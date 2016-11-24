@@ -8,11 +8,8 @@ import uiRouter from 'angular-ui-router';
 import ngReduxUiRouter from 'redux-ui-router';
 import reducers from './reducers';
 import createLogger from 'redux-logger';
+import App from './pages/app';
 
-// Import components
-import './components';
-
-// Import Styles
 import './styles/styles';
 
 // Setup Redux Middleware
@@ -23,14 +20,12 @@ const initalState = {};
 
 angular
     .module('app', [
+        App,
         ngRedux,
         uiRouter,
-        ngReduxUiRouter,
-        'components'
+        ngReduxUiRouter
     ])
     .config( ($urlRouterProvider, $stateProvider, $locationProvider) => {
-
-        // Setup Routes
 
         // HTML5 Mode
         $locationProvider.html5Mode({
@@ -40,13 +35,6 @@ angular
 
         // Default Route
         $urlRouterProvider.otherwise('/');
-
-        // Create /app Route
-        $stateProvider
-        .state('app', {
-            url: '/app',
-            template: '<h1>Test</h1>'
-        });
 
     })
     .config( $ngReduxProvider => {
@@ -62,4 +50,3 @@ angular
         $urlRouter.listen();
 
     })
-

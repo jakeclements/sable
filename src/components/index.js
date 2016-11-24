@@ -1,12 +1,13 @@
-/* ==========================================================================
-   Component Manifest
-   ========================================================================== */
+/**
+ * Components Module
+ */
 import angular from 'angular';
+import HeaderComponent from './header';
 
-// Components
-import './test/test.module';
+const Components = angular
+    .module('components', [
+        HeaderComponent
+    ])
+    .name;
 
-// Named components
-const components = ['test'];
-
-angular.module('components', components)
+export default Components

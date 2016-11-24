@@ -1,39 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
 <head>
     <meta charset="UTF-8">
-    <title>Sample Application</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Sable - StarWars</title>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/assets/styles.css">
 </head>
 <body>
-
-    <small>Test index.html</small>
-
-    <!-- Angular App -->
-    <div ng-app="app">
-
-        <!-- Router View -->
-        <div ui-view></div>
-
-        <!-- A test controller -->
-        <div ng-controller="testctrl as test">
-
-            <a ng-click="test.click(true)" href="#">True</a>
-            <a ng-click="test.click(false)" href="#">False</a>
-            <br>
-            Clicked: {{test.clicked}}
-            <br><br>
-            <a ng-click="test.getUser()" href="#">Get a User</a>
-            <br><br>
-            User: {{test.user}}
-            <br><br>
-            <a href="#" ng-click="test.stateGo('app')">Goto App Route</a>
-
-        </div>
-
-    </div>
-
-    <script type="text/javascript" src="bundle.js"></script>
-
+    <app></app>
+    <script type="text/javascript" src="http://localhost:8080/assets/bundle.js"></script>
 </body>
 </html>

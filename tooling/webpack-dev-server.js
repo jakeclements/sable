@@ -16,11 +16,17 @@ const server = new webpackDevServer(compiler, {
     historyApiFallback: true,
     compress: false,
     stats: {
-        colors: true
-    }
+        assets: true,
+        colors: true,
+        version: true,
+        hash: false,
+        timings: true,
+        chunks: false,
+        chunkModules: false
+    },
+    // https: true,
+    publicPath: '/assets/'
 });
 
 // Start the server
-server.listen(8080, 'localhost', () => {
-    console.log('Server started at localhost:8080')
-})
+server.listen(8080, 'localhost')
