@@ -3,10 +3,14 @@
  */
 import angular from 'angular';
 import HeaderComponent from './header';
+import ToggleSwitchComponent from './toggle-switch';
+import CardComponent from './card';
 
 const Components = angular
     .module('components', [
-        HeaderComponent
+        HeaderComponent,
+        ToggleSwitchComponent,
+        CardComponent
     ])
     .name;
 

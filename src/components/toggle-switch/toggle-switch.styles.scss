@@ -1,0 +1,88 @@
+/* ==========================================================================
+   Toggle Component Styles
+   ========================================================================== */
+$speed: 0.2s;
+$activatedColor: #8ce196;
+$deactivedColor: #dddddd;
+
+.toggle-switch-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.toggle-label__left,
+.toggle-label__right {
+    margin: 6px 12px;
+    text-transform: uppercase;
+    font-size: .8em;
+}
+
+.toggle-label__left {
+    margin-left: 0;
+}
+
+.toggle-label__right {
+    margin-right: 0;
+}
+
+.toggle-switch {
+    display: block;
+}
+
+.toggle-label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+    padding: 2px;
+    width: 40px;
+    height: 25px;
+    background-color: $deactivedColor;
+    border-radius: 25px;
+    transition: background $speed;
+
+    &:before,
+    &:after {
+        display: block;
+        position: absolute;
+        content: "";
+    }
+
+    &:before {
+        top: 2px;
+        left: 2px;
+        bottom: 2px;
+        right: 2px;
+        background-color: #fff;
+        border-radius: 35px;
+        transition: background $speed;
+    }
+
+    &:after {
+        top: 4px;
+        left: 4px;
+        bottom: 4px;
+        width: 17px;
+        background-color: $deactivedColor;
+        border-radius: 17px;
+        transition: margin $speed, background $speed;
+    }
+}
+
+.toggle-input {
+    position: absolute;
+    margin-left: -9999px;
+    visibility: hidden;
+}
+
+.toggle-input:checked {
+    & + .toggle-label {
+        background-color: $activatedColor;
+    }
+
+    & + .toggle-label:after {
+        margin-left: 14px;
+        background-color: $activatedColor;
+    }
+}

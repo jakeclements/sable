@@ -1,0 +1,27 @@
+/* ==========================================================================
+   Card Component Styles
+   ========================================================================== */
+.card-component {
+    position: relative;
+    width: 350px;
+    max-width: 350px;
+    border: 1px solid #fff;
+    background: rgba(255,255,255,0);
+    padding: 160px 30px 30px 30px;
+    margin: 0 auto;
+    min-height: 400px;
+    margin-top: 70px;
+    border-radius: 6px;
+}
+
+.card-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    top: -70px;
+    background: rgba(32, 32, 32, .85);
+    border: 1px solid rgba(255, 255, 255, .65);
+}

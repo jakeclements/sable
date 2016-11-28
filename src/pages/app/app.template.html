@@ -1,0 +1,12 @@
+<script type="text/ng-template" id="AppTemplate">
+
+    <header-component
+        toggle-difficulty="$ctrl.toggleDifficultySwitch()"
+        difficulty-checked="$ctrl.difficultyChecked">
+    </header-component>
+
+    <main class="main-wrapper">
+        <ui-view></ui-view>
+    </main>
+    <footer></footer>
+</script>

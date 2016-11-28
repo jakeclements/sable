@@ -2,10 +2,14 @@
  * Header Component
  */
 import './header.template';
+import './header.styles';
 
 const HeaderComponent = {
     templateUrl: 'headerTemplate',
-    controller: function() {}
+    bindings: {
+        toggleDifficulty: '&',
+        difficultyChecked: '<'
+    }
 }
 
 export default HeaderComponent

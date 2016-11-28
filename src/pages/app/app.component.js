@@ -1,13 +1,11 @@
 /**
  * App Wrapping Component
  */
+import AppController from './app.controller';
+import './app.template';
+import './app.styles';
+
 export const AppComponent = {
-    template: `
-        <header-component></header-component>
-        <main></main>
-        <footer></footer>
-    `,
-    controller: function() {
-        console.log('sip')
-    }
+    templateUrl: 'AppTemplate',
+    controller: AppController
 };

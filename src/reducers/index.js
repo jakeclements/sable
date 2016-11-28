@@ -3,9 +3,11 @@
    ========================================================================== */
 import { router } from 'redux-ui-router';
 import { combineReducers } from 'redux';
-import sample from './sample.reducer';
+import card from './cards';
+import appState from './app-state';
 
 export default combineReducers({
-    sample,
+    appState,
+    card,
     router
 })

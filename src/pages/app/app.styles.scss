@@ -1,6 +1,7 @@
 /* ==========================================================================
-   Redux UI Router Actions
+   App Wrapping Element Styles
    ========================================================================== */
-export { stateGo, stateReload, stateTransitionTo } from 'redux-ui-router';
-
-
+.main-wrapper {
+    width: calc(100% - 80px);
+    margin: 0 auto;
+}
